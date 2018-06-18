@@ -1,0 +1,27 @@
+group 'com.ycm'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+//standard source sets
+sourceSets {
+    main {
+        java { srcDir 'src/main/java' }
+        resources.srcDir 'src/main/resources'
+    }
+    test {
+        java { srcDir 'src/test/java' }
+        resources.srcDir 'src/test/resources'
+    }
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.16.10'
+    testCompile 'junit:junit:4.12'
+}
